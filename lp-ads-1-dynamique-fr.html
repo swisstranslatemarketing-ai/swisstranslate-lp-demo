@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--
+  LANDING PAGE ADS #1 — "Dynamique" — Campagne Google Ads Interprétation FR
+  Charte graphique EXACTE relevée sur swisstranslate.ch (via inspection live) :
+    - Navy texte/fond sombre : #0E2D5D
+    - Bleu indigo (bandeau supérieur) : #050D96
+    - Rouge/corail CTA : #FE213F
+    - Bleu accent (liens actifs) : #006CFF
+    - Blanc cassé (texte sur fond sombre) : #F1F5FF
+    - Police du site : "futura-pt" / "futura-pt-bold" (Adobe Fonts, payante).
+      Non disponible publiquement -> remplacée ici par "Jost" (Google Fonts),
+      l'alternative géométrique gratuite la plus proche de Futura PT.
+      -> Si Swisstranslate a son kit Adobe Fonts (Typekit), remplacer le lien
+         Google Fonts ci-dessous par le script kit Adobe pour un rendu 100% fidèle.
+  MAJ v2 : logo, favicon et badges ISO 9001 / ISO 17100 = fichiers officiels
+  fournis par Swisstranslate (encodés en base64, page 100% autonome).
+  Bloc "Ils nous font confiance" transformé en bandeau défilant (marquee,
+  droite -> gauche) avec logos placeholder, à remplacer par les vrais logos
+  clients. Formulaire de devis pas encore prêt : tous les CTA "devis" ouvrent
+  une modale de patience (numéro + email) en attendant son intégration.
+  Barre de CTA sticky ajoutée en mobile : sur les 28 derniers jours, le trafic
+  payant (Paid Search) de swisstranslate.ch est quasi 50/50 mobile (265) /
+  desktop (260) selon GA4 -> priorité égale aux deux formats, tap targets
+  larges et CTA toujours accessibles au pouce sur mobile.
+
+  Mots-clés Google Ads intégrés (campagne "Search | Interprétation | CH | FR",
+  extraits le 17.08.2026) : agence d'interprétation (top volume/CPC), interprétation
+  simultanée, interprète en Suisse, interprète professionnel, interprétation
+  consécutive, interprétation à distance, interprétation juridique, interprétation
+  médicale, interprète pour conférence / mariage / tribunal, traduction orale.
+  MAJ v3 : le cluster de mots-clés "mariage civil" (FR/DE/EN) reste couvert
+  (dernier chip secteur + 1 témoignage) mais volontairement discret : sur
+  demande du client, l'accent va au B2B (juridique, finance, conférence,
+  réunions d'affaires) plutôt qu'au mariage civil, malgré sa présence dans les
+  campagnes Ads actuelles.
+
+  Chiffres, certifications ISO (visuels réels, texte de certification à
+  confirmer) et témoignages restent des placeholders (*) — à remplacer par les
+  données réelles avant mise en ligne. Aucun prix n'est affiché sur la page.
+-->
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agence d'interprétation en Suisse | Devis en 30 min - Swisstranslate</title>
+<meta name="description" content="Interprétation simultanée, consécutive ou à distance : des interprètes professionnels et natifs, basés en Suisse, spécialisés dans votre secteur. Devis gratuit en 30 minutes.">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0E2D5D;
+    --indigo:#050D96;
+    --red:#FE213F;
+    --blue:#006CFF;
+    --offwhite:#F1F5FF;
+    --muted:#5C6C85;
+    --border:#E3E9F5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;color:var(--navy);background:#fff;line-height:1.6;overflow-x:hidden;}
+  h1,h2,h3,h4{font-family:'Jost',sans-serif;font-weight:500;line-height:1.18;}
+  strong,.fw-bold{font-weight:700;}
+  a{text-decoration:none;color:inherit;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  section{padding:84px 0;position:relative;}
+  .tag{display:inline-flex;align-items:center;gap:6px;background:var(--offwhite);color:var(--indigo);font-weight:700;font-size:13px;padding:8px 16px;border-radius:999px;margin-bottom:18px;letter-spacing:.02em;}
+  .muted{color:var(--muted);}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 30px;border-radius:8px;font-weight:700;font-size:15.5px;transition:.2s;}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(254,33,63,.3);}
+  .btn-red:hover{background:#e01230;transform:translateY(-2px);}
+  .btn-ghost{background:#fff;color:var(--navy);border:2px solid var(--navy);}
+  .btn-ghost:hover{background:var(--navy);color:#fff;}
+  .btn-white{background:#fff;color:var(--navy);}
+
+  /* top thin bar like real site */
+  .topbar{background:var(--indigo);color:rgba(255,255,255,.55);font-size:12.5px;text-align:center;padding:6px 12px;}
+
+  header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);z-index:50;border-bottom:1px solid var(--border);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-mark{width:34px;height:34px;border-radius:50%;position:relative;background:linear-gradient(180deg,var(--red) 50%, var(--blue) 50%);flex:none;}
+  .logo-word{font-weight:700;font-size:19px;color:var(--navy);}
+  .logo-word span{color:var(--blue);font-weight:500;}
+  .logo-tag{font-size:9.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:-2px;}
+  .header-actions{display:flex;align-items:center;gap:16px;}
+  .phone-pill{font-weight:700;font-size:13.5px;color:var(--navy);background:var(--offwhite);padding:10px 16px;border-radius:999px;}
+  .btn-sm{padding:12px 22px;font-size:14px;}
+
+  /* Hero */
+  .hero{background:linear-gradient(160deg,#F1F5FF 0%,#EAF1FF 55%,#fff 100%);padding-top:60px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;}
+  .hero h1{font-size:46px;color:var(--navy);margin-bottom:20px;letter-spacing:-.5px;}
+  .hero h1 .accent{color:var(--red);}
+  .hero p{font-size:18px;color:var(--muted);max-width:540px;margin-bottom:30px;}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:26px;}
+  .trust-mini{display:flex;gap:14px;flex-wrap:wrap;}
+  .trust-mini span{font-size:13px;font-weight:600;color:var(--navy);background:#fff;padding:8px 14px;border-radius:999px;border:1px solid var(--border);}
+
+  .hero-visual{position:relative;height:420px;}
+  .visual-card{position:absolute;background:#fff;border-radius:18px;box-shadow:0 20px 50px rgba(14,45,93,.16);padding:22px;}
+  .vc1{top:10px;left:0;width:230px;}
+  .vc1 .emoji{font-size:28px;}
+  .vc1 h4{font-size:15px;margin:10px 0 4px;}
+  .vc1 p{font-size:12.5px;color:var(--muted);}
+  .vc2{bottom:30px;left:60px;width:210px;background:var(--navy);color:#fff;}
+  .vc2 .big{font-size:29px;font-weight:700;color:#8fc4ff;}
+  .vc2 .lbl{font-size:12px;color:#b9c8e8;}
+  .vc3{top:130px;right:0;width:200px;}
+  .vc3 .stars{color:#FFB020;font-size:13px;}
+  .vc3 p{font-size:12.5px;margin-top:8px;color:var(--navy);}
+  .blob-main{position:absolute;inset:40px 60px;background:linear-gradient(135deg,var(--indigo),var(--blue));border-radius:38% 62% 63% 37% / 41% 44% 56% 59%;opacity:.12;z-index:0;}
+
+  .strip{padding:34px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  .strip p{text-align:center;font-size:13px;color:var(--muted);font-weight:600;margin-bottom:20px;text-transform:uppercase;letter-spacing:.06em;}
+  .strip-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:22px;opacity:.6;font-weight:700;font-size:17px;color:var(--navy);}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px;}
+  .svc-card{border-radius:18px;padding:26px 22px;color:#fff;position:relative;overflow:hidden;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;}
+  .svc-card h3{font-size:18px;margin-bottom:8px;font-weight:600;}
+  .svc-card p{font-size:13.5px;opacity:.92;}
+  .svc-card .icon{font-size:30px;position:absolute;top:22px;left:24px;}
+  .svc1{background:linear-gradient(160deg,var(--navy),#1d4a8a);}
+  .svc2{background:linear-gradient(160deg,var(--blue),#3f93ff);}
+  .svc3{background:linear-gradient(160deg,var(--indigo),#2b1fc9);}
+  .svc4{background:linear-gradient(160deg,#1a2340,#33406b);}
+
+  .stats-band{background:var(--navy);color:#fff;border-radius:28px;}
+  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding:54px 24px;}
+  .stat h3{font-size:38px;font-weight:700;color:#8fc4ff;}
+  .stat p{font-size:13.5px;color:#b9c8e8;margin-top:8px;}
+
+  .zig{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:70px;}
+  .zig.reverse .zig-visual{order:2;}
+  .zig-visual{height:250px;border-radius:22px;background:linear-gradient(135deg,var(--offwhite),#fff);display:flex;align-items:center;justify-content:center;font-size:66px;border:1px solid var(--border);}
+  .zig h3{font-size:25px;margin-bottom:14px;font-weight:600;}
+  .zig p{color:var(--muted);font-size:15.5px;margin-bottom:18px;}
+  .check-list{list-style:none;}
+  .check-list li{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:14.5px;color:var(--navy);}
+  .check-list li::before{content:"✓";color:var(--blue);font-weight:800;}
+
+  .testi-scroll{display:flex;gap:20px;overflow-x:auto;padding:10px 4px 20px;scroll-snap-type:x mandatory;margin-top:40px;}
+  .testi-card{flex:0 0 320px;scroll-snap-align:start;background:var(--offwhite);border-radius:18px;padding:26px;}
+  .testi-card .stars{color:#FFB020;margin-bottom:14px;}
+  .testi-card p{font-size:14.5px;margin-bottom:18px;color:var(--navy);}
+  .testi-person{display:flex;align-items:center;gap:10px;}
+  .avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--indigo));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;}
+  .testi-person b{display:block;font-size:13.5px;}
+  .testi-person span{font-size:12.5px;color:var(--muted);}
+
+  .timeline{display:flex;justify-content:space-between;margin-top:50px;position:relative;}
+  .timeline::before{content:"";position:absolute;top:20px;left:5%;right:5%;height:3px;background:linear-gradient(90deg,var(--indigo),var(--blue),var(--red));border-radius:2px;}
+  .tl-item{flex:1;text-align:center;position:relative;padding:0 10px;}
+  .tl-dot{width:40px;height:40px;border-radius:50%;background:#fff;border:3px solid var(--indigo);color:var(--indigo);font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;position:relative;z-index:1;}
+  .tl-item h4{font-size:15px;margin-bottom:6px;font-weight:600;}
+  .tl-item p{font-size:13px;color:var(--muted);}
+
+  .sector-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;}
+  .sector-chip{padding:12px 20px;border-radius:999px;font-weight:600;font-size:14px;background:#fff;border:2px solid var(--border);color:var(--navy);}
+  .sector-chip.highlight{border-color:var(--red);color:var(--red);background:#fff5f6;}
+  .sector-chip:nth-child(3n+2){border-color:var(--blue);color:var(--blue);}
+  .sector-chip:nth-child(3n+3){border-color:var(--indigo);color:var(--indigo);}
+
+  .cert-band{background:var(--offwhite);border-radius:28px;padding:56px;}
+  .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px;}
+  .cert-card{background:#fff;border-radius:16px;padding:26px;text-align:center;}
+  .cert-card .badge{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--blue));color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:12.5px;}
+  .cert-card h4{font-size:15px;margin-bottom:8px;font-weight:600;}
+  .cert-card p{font-size:13px;color:var(--muted);}
+
+  .final{background:linear-gradient(135deg,var(--navy),var(--indigo));border-radius:30px;color:#fff;text-align:center;padding:70px 30px;}
+  .final h2{color:#fff;font-size:32px;}
+  .final p{color:#c7d5f0;max-width:500px;margin:0 auto 30px;}
+  .final-ctas{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+
+  footer{padding:36px 0;text-align:center;font-size:13px;color:var(--muted);}
+  footer a{color:var(--indigo);font-weight:700;}
+
+  /* Logo réel */
+  .logo-mark img{width:34px;height:auto;display:block;}
+  .final-logo{width:120px;height:auto;margin:0 auto 22px;opacity:.95;}
+
+  /* Marquee références (défilement droite -> gauche) */
+  .marquee-wrap{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+  .marquee-track{display:flex;gap:56px;width:max-content;animation:marquee 28s linear infinite;}
+  .marquee-track:hover{animation-play-state:paused;}
+  .marquee-logo{flex:none;display:flex;align-items:center;justify-content:center;height:42px;padding:0 8px;font-weight:700;font-size:16px;color:var(--muted);opacity:.55;white-space:nowrap;border:1.5px dashed var(--border);border-radius:8px;min-width:150px;}
+  @keyframes marquee{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  /* Modale "devis" (placeholder en attendant le formulaire) */
+  .modal-overlay{position:fixed;inset:0;background:rgba(14,45,93,.55);backdrop-filter:blur(3px);z-index:200;display:none;align-items:center;justify-content:center;padding:20px;}
+  .modal-overlay.open{display:flex;}
+  .modal-box{background:#fff;border-radius:20px;max-width:440px;width:100%;padding:36px;position:relative;text-align:center;}
+  .modal-box .close{position:absolute;top:16px;right:18px;font-size:20px;color:var(--muted);cursor:pointer;background:none;border:none;}
+  .modal-box .ic{font-size:36px;margin-bottom:14px;}
+  .modal-box h3{font-size:20px;color:var(--navy);margin-bottom:10px;}
+  .modal-box p{font-size:14.5px;color:var(--muted);margin-bottom:22px;}
+  .modal-box .btn{width:100%;justify-content:center;margin-bottom:10px;}
+
+  /* Barre CTA sticky mobile */
+  .mobile-cta-bar{display:none;}
+  @media(max-width:680px){
+    .mobile-cta-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:100;background:#fff;border-top:1px solid var(--border);box-shadow:0 -8px 24px rgba(14,45,93,.12);padding:10px 14px;gap:10px;}
+    .mobile-cta-bar .btn{flex:1;justify-content:center;padding:13px 10px;font-size:14px;}
+    body{padding-bottom:70px;}
+  }
+
+  @media(max-width:960px){
+    .hero-grid,.zig,.svc-grid,.stats-inner,.cert-grid{grid-template-columns:1fr 1fr;}
+    .hero-visual{display:none;}
+    .timeline::before{display:none;}
+    .timeline{flex-direction:column;gap:24px;}
+  }
+  @media(max-width:600px){
+    .hero h1{font-size:32px;}
+    .hero-grid,.zig,.svc-grid,.stats-inner,.cert-grid{grid-template-columns:1fr;}
+    .zig.reverse .zig-visual{order:0;}
+    section{padding:56px 0;}
+    .phone-pill{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">🇨🇭 Agence d'interprétation basée à Genève — pas une plateforme internationale</div>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-mark"><img src="assets/icon.png" alt="Swisstranslate"></div>
+      <div>
+        <div class="logo-word">Swiss<span>translate</span></div>
+        <div class="logo-tag">Words Without Borders</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span class="phone-pill">📞 +41 22 566 13 01</span>
+      <button onclick="openDevisModal()" class="btn btn-red btn-sm">Devis en 30 min</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">🇨🇭 Agence d'interprétation — Genève, Zurich, Suisse</span>
+      <h1>Agence d'interprétation en Suisse — <span class="accent">interprètes professionnels natifs</span></h1>
+      <p>Interprétation simultanée, consécutive, chuchotée ou à distance : nos interprètes professionnels, 100% natifs et basés en Suisse, interviennent partout à Genève, Zurich et dans toute la Suisse.</p>
+      <div class="hero-ctas">
+        <button onclick="openDevisModal()" class="btn btn-red">Demander un devis en 30 min</button>
+        <a href="tel:+41225661301" class="btn btn-ghost">📞 Parler à un conseiller</a>
+      </div>
+      <div class="trust-mini">
+        <span>✓ Interprète en Suisse, jamais à l'étranger</span>
+        <span>✓ +40 langues*</span>
+        <span>✓ ISO 17100 & 9001*</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="blob-main"></div>
+      <div class="visual-card vc1"><div class="emoji">🎙️</div><h4>Interprétation simultanée & consécutive</h4><p>Sur site ou à distance, cabines incluses.</p></div>
+      <div class="visual-card vc2"><div class="big">500+</div><div class="lbl">missions d'interprétation par an*</div></div>
+      <div class="visual-card vc3"><div class="stars">★★★★★</div><p>« Un interprète professionnel, réactif et précis. »*</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="container">
+    <p>Ils nous font confiance <em style="font-style:normal;opacity:.6;">(bloc dynamique — logos clients à venir)</em></p>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marquee-track">
+      <span class="marquee-logo">Logo client 1</span>
+      <span class="marquee-logo">Logo client 2</span>
+      <span class="marquee-logo">Logo client 3</span>
+      <span class="marquee-logo">Logo client 4</span>
+      <span class="marquee-logo">Logo client 5</span>
+      <span class="marquee-logo">Logo client 6</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <span class="tag">Nos prestations</span>
+    <h2 style="font-size:33px;">Interprétation simultanée, consécutive, chuchotée ou à distance</h2>
+    <div class="svc-grid">
+      <div class="svc-card svc1"><div class="icon">🎧</div><h3>Interprétation simultanée</h3><p>Traduction en direct via cabine, pour conférences et grands événements multilingues.</p></div>
+      <div class="svc-card svc2"><div class="icon">🗣️</div><h3>Interprétation consécutive</h3><p>Idéale pour réunions d'affaires, négociations commerciales et visites officielles.</p></div>
+      <div class="svc-card svc3"><div class="icon">🤫</div><h3>Chuchotage</h3><p>Interprétation discrète et sans matériel, pour un interlocuteur ou petit groupe.</p></div>
+      <div class="svc-card svc4"><div class="icon">💻</div><h3>Interprétation à distance</h3><p>Via Zoom, Teams ou plateforme dédiée : coûts et délais réduits, même qualité.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="stats-band">
+      <div class="stats-inner">
+        <div class="stat"><h3 data-count="15">0</h3><p>années d'expérience*</p></div>
+        <div class="stat"><h3 data-count="500">0</h3><p>missions / an*</p></div>
+        <div class="stat"><h3 data-count="40">0</h3><p>langues couvertes*</p></div>
+        <div class="stat"><h3 data-count="98">0</h3><p>% clients satisfaits*</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="zig">
+      <div>
+        <span class="tag">Interprète en Suisse</span>
+        <h3>Un interprète professionnel basé en Suisse, jamais délocalisé</h3>
+        <p>Contrairement aux plateformes internationales, chaque interprète Swisstranslate est basé en Suisse : disponibilité rapide, connaissance du contexte local et des usages helvétiques.</p>
+        <ul class="check-list">
+          <li>Interprètes 100% natifs, sélectionnés par paire de langues</li>
+          <li>Présence à Genève, Zurich et dans toute la Suisse</li>
+          <li>Devis personnalisé transmis en 30 minutes</li>
+        </ul>
+      </div>
+      <div class="zig-visual">🇨🇭</div>
+    </div>
+    <div class="zig reverse">
+      <div>
+        <span class="tag">Spécialisation sectorielle</span>
+        <h3>Interprétation juridique, financière et médicale pour votre entreprise</h3>
+        <p>Chaque secteur a son vocabulaire : nos interprètes sont sélectionnés selon leur expérience du domaine — tribunal, conseil d'administration, salon professionnel ou négociation d'affaires.</p>
+        <ul class="check-list">
+          <li>Interprétation juridique : tribunaux, cabinets d'avocats</li>
+          <li>Interprétation financière : AG, due diligence, roadshows</li>
+          <li>Interprétation médicale : congrès, consultations</li>
+        </ul>
+      </div>
+      <div class="zig-visual">⚖️</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--offwhite);">
+  <div class="container">
+    <span class="tag">Ils en parlent</span>
+    <h2 style="font-size:31px;">La confiance de nos clients, mission après mission</h2>
+    <div class="testi-scroll">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>« Interprète professionnel parfaitement à l'aise avec notre jargon financier. »*</p>
+        <div class="testi-person"><div class="avatar">DF</div><div><b>Directrice Finance</b><span>Groupe bancaire, Genève</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>« Devis reçu en 30 minutes, interprète confirmé le jour même pour une négociation urgente. »*</p>
+        <div class="testi-person"><div class="avatar">GC</div><div><b>General Counsel</b><span>Cabinet d'avocats international</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>« Une agence suisse réactive et rigoureuse sur chaque mission d'interprétation. »*</p>
+        <div class="testi-person"><div class="avatar">EV</div><div><b>Event Manager</b><span>Organisation internationale</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>« Un interprète assermenté impeccable pour notre mariage civil, tout s'est déroulé sans stress. »*</p>
+        <div class="testi-person"><div class="avatar">MK</div><div><b>Futurs mariés</b><span>Genève</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="tag">Comment ça marche</span>
+    <h2 style="font-size:31px;">Votre interprète mobilisé en 4 étapes</h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot">1</div><h4>Votre besoin</h4><p>Date, langues, secteur en 2 minutes.</p></div>
+      <div class="tl-item"><div class="tl-dot">2</div><h4>Sélection</h4><p>Interprète natif et spécialisé.</p></div>
+      <div class="tl-item"><div class="tl-dot">3</div><h4>Briefing</h4><p>Préparation vocabulaire & contexte.</p></div>
+      <div class="tl-item"><div class="tl-dot">4</div><h4>Mission</h4><p>Prestation assurée + débrief.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="tag">Secteurs & occasions</span>
+    <h2 style="font-size:31px;">Un interprète professionnel pour chaque situation</h2>
+    <div class="sector-grid">
+      <span class="sector-chip">Réunions d'affaires</span>
+      <span class="sector-chip">Juridique & tribunal</span>
+      <span class="sector-chip">Finance & assurances</span>
+      <span class="sector-chip">Conférence & événementiel</span>
+      <span class="sector-chip">Santé & médical</span>
+      <span class="sector-chip">Organisations internationales</span>
+      <span class="sector-chip">À distance (Zoom, Teams)</span>
+      <span class="sector-chip">Mariage civil & cérémonies</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cert-band">
+      <span class="tag" style="background:#fff;">Qualité certifiée</span>
+      <h2 style="font-size:29px;">Pas juste une promesse : un cadre qualité vérifiable*</h2>
+      <div class="cert-grid">
+        <div class="cert-card"><img src="assets/iso17100.png" alt="ISO 17100" style="width:70px;height:auto;margin:0 auto 14px;"><h4>ISO 17100</h4><p>Norme dédiée aux services de traduction et d'interprétation.</p></div>
+        <div class="cert-card"><img src="assets/iso9001.png" alt="ISO 9001" style="width:70px;height:auto;margin:0 auto 14px;"><h4>ISO 9001</h4><p>Système de management qualité, de bout en bout.</p></div>
+        <div class="cert-card"><div class="badge">🤝</div><h4>Charte déontologique</h4><p>Confidentialité et neutralité garanties contractuellement.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="devis">
+  <div class="container">
+    <div class="final">
+      <img class="final-logo" src="assets/logo_white.png" alt="Swisstranslate — Words Without Borders">
+      <h2>Besoin d'un interprète professionnel en Suisse ?</h2>
+      <p>Devis personnalisé en 30 minutes, ou échangez directement avec un conseiller.</p>
+      <div class="final-ctas">
+        <a href="tel:+41225661301" class="btn btn-white">📞 +41 22 566 13 01</a>
+        <button onclick="openDevisModal()" class="btn" style="border:2px solid #fff;color:#fff;background:transparent;">Demander un devis</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    Swisstranslate — Rue Ferdinand-Hodler 9, 1207 Genève — <a href="mailto:info@swisstranslate.ch">info@swisstranslate.ch</a>
+    <br><small>* Chiffres et témoignages à titre d'illustration — à remplacer par les données réelles avant publication. Visuels ISO fournis par Swisstranslate.</small>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar">
+  <button onclick="openDevisModal()" class="btn btn-red">Devis en 30 min</button>
+  <a href="tel:+41225661301" class="btn btn-ghost">📞 Appeler</a>
+</div>
+
+<div class="modal-overlay" id="devis-modal">
+  <div class="modal-box">
+    <button class="close" onclick="closeDevisModal()">✕</button>
+    <div class="ic">📝</div>
+    <h3>Le formulaire de devis arrive bientôt</h3>
+    <p>Cet emplacement accueillera le formulaire de devis en ligne. En attendant, contactez-nous directement et nous revenons vers vous en 30 minutes.</p>
+    <a href="tel:+41225661301" class="btn btn-red">📞 +41 22 566 13 01</a>
+    <a href="mailto:info@swisstranslate.ch" class="btn btn-ghost">✉️ info@swisstranslate.ch</a>
+  </div>
+</div>
+
+<script>
+  const counters = document.querySelectorAll('[data-count]');
+  const animate = (el) => {
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    let cur = 0;
+    const step = Math.max(1, Math.ceil(target / 60));
+    const tick = () => {
+      cur += step;
+      if (cur >= target) { el.textContent = target + (target===98?'':'+'); return; }
+      el.textContent = cur;
+      requestAnimationFrame(tick);
+    };
+    tick();
+  };
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { animate(e.target); obs.unobserve(e.target); } });
+  }, {threshold:0.4});
+  counters.forEach(c => obs.observe(c));
+
+  function openDevisModal(){ document.getElementById('devis-modal').classList.add('open'); }
+  function closeDevisModal(){ document.getElementById('devis-modal').classList.remove('open'); }
+  document.getElementById('devis-modal').addEventListener('click', (e) => { if(e.target.id === 'devis-modal') closeDevisModal(); });
+
+  // Marquee : on duplique la liste pour un défilement continu sans coupure
+  const track = document.getElementById('marquee-track');
+  if (track) { track.innerHTML += track.innerHTML; }
+</script>
+
+</body>
+</html>
