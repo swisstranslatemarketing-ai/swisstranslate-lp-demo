@@ -211,6 +211,36 @@ footer a{color:var(--indigo);font-weight:700;}
 section{padding:52px 0;}
 .devis-block{padding:30px 20px;}
 }
+
+/* Textes agrandis en desktop/tablette uniquement (mobile inchangé, déjà validé) */
+@media(min-width:601px){
+h2{font-size:36px;}
+.tag{font-size:14px;}
+.lead{font-size:19px;}
+.hero-top h1{font-size:44px;}
+.hero-top p{font-size:19px;}
+.sector-tab{font-size:15px;}
+#dyn-headline{font-size:29px;}
+#dyn-sub{font-size:17px;}
+#dyn-quote{font-size:16.5px;}
+#dyn-who b{font-size:15px;}
+#dyn-who span{font-size:14px;}
+.strip p{font-size:14px;}
+.devis-steps div b{font-size:16.5px;}
+.devis-steps div span{font-size:14.5px;}
+.svc-card h3{font-size:19px;}
+.svc-card p{font-size:15px;}
+.usp-card h3{font-size:18px;}
+.usp-card p{font-size:14.5px;}
+.sector-card h4{font-size:17px;}
+.sector-card p{font-size:14px;}
+.iso-card h4{font-size:21px;}
+.iso-card p{font-size:16px;}
+.faq-item summary{font-size:17px;}
+.faq-item p{font-size:15.5px;}
+footer{font-size:14px;}
+.btn{font-size:16px;}
+}
 </style>
 </head>
 <body>
@@ -250,7 +280,7 @@ section{padding:52px 0;}
 <div class="hero-panel">
 <div>
 <div class="hero-panel-icon" id="dyn-icon">🏢</div>
-<h2 id="dyn-headline" style="font-size:25px;">Un interprète professionnel pour vos échanges d'affaires</h2>
+<h2 id="dyn-headline">Un interprète professionnel pour vos échanges d'affaires</h2>
 <p id="dyn-sub">Interprétation simultanée, consécutive, chuchotée ou à distance : un interprète natif, mobilisable en 48h, pour toutes vos réunions multilingues en Suisse.</p>
 <div class="hero-ctas">
 <button onclick="openDevisModal()" class="btn btn-red">Demander un devis</button>
