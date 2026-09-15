@@ -8,10 +8,18 @@ Police : Jost (fallback libre de "futura-pt", police réelle du site, payante/Ad
 Sélecteur de secteur reconstruit à partir des VRAIS clusters de mots-clés observés
 dans le compte Google Ads (campagnes FR/DE/EN) : Généraliste, Juridique (tribunal/
 gerichtsdolmetscher/court interpreter), Conférence & événementiel, Santé (médical/
-medizinisch/medical interpreting), À distance, Mariage civil.
+medizinisch/medical interpreting), À distance, Mariage civil, Permis de conduire, Tourisme.
+
+MAJ v4 (15/09) : retours Adrien appliqués — zoom hover marquee, logos trust-mini
+masqués en mobile uniquement, tirets cadratins retirés des textes visibles, mise
+en avant de Genève (berceau international) plutôt que "Suisse" seule, mention
+"24h" retirée (non vérifiée), USP reformulé sans "pas une plateforme
+internationale", section renommée "Secteurs", ajout secteurs Permis de conduire
+et Tourisme, ISO 20228 ajoutée au bloc USP, question FAQ "basés en Suisse"
+supprimée.
 
 MAJ v3 : le mariage civil est un cluster de mots-clés réel dans les campagnes
-(FR/DE/EN) mais reste volontairement en retrait — sur demande du client, la
+(FR/DE/EN) mais reste volontairement en retrait, sur demande du client, la
 page met en avant le B2B (entreprise, juridique, conférence) en premier. Le
 mariage civil est le dernier onglet/la dernière carte secteur, sans mise en
 avant visuelle, et reste couvert via la FAQ.
@@ -118,7 +126,7 @@ header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--borde
 .marquee-track:hover{animation-play-state:paused;}
 .marquee-logo{flex:none;display:flex;align-items:center;justify-content:center;height:76px;padding:0 20px;white-space:nowrap;}
 .marquee-logo img{height:100%;max-height:60px;width:auto;max-width:190px;object-fit:contain;filter:grayscale(100%);opacity:.55;transition:.2s;}
-.marquee-logo img:hover{filter:grayscale(0%);opacity:1;}
+.marquee-logo img:hover{filter:grayscale(0%);opacity:1;transform:scale(1.15);}
 @keyframes marquee{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
 /* Mini bandeau de réassurance juste au-dessus du CTA de devis */
@@ -210,6 +218,7 @@ footer a{color:var(--indigo);font-weight:700;}
 .phone{display:none;}
 section{padding:52px 0;}
 .devis-block{padding:30px 20px;}
+.trust-mini{display:none;}
 }
 
 /* Textes agrandis en desktop/tablette uniquement (mobile inchangé, déjà validé) */
@@ -245,7 +254,7 @@ footer{font-size:14px;}
 </head>
 <body>
 
-<div class="topbar">Agence d'interprétation basée en Suisse</div>
+<div class="topbar">Agence d'interprétation basée à Genève, cœur de la Suisse internationale</div>
 
 <header>
 <div class="header-inner">
@@ -263,8 +272,8 @@ footer{font-size:14px;}
 <section class="hero">
 <div class="container">
 <div class="hero-top">
-<span class="tag">Agence d'interprétation — Suisse</span>
-<h1>Trouvez l'interprète professionnel adapté à votre besoin, en Suisse</h1>
+<span class="tag">Agence d'interprétation à Genève</span>
+<h1>Trouvez l'interprète professionnel adapté à votre besoin, à Genève et en Suisse</h1>
 <p>Juridique, finance, conférence ou réunions d'affaires : sélectionnez votre situation, on personnalise l'approche.</p>
 </div>
 
@@ -274,6 +283,8 @@ footer{font-size:14px;}
 <button class="sector-tab" data-sector="evenementiel">Conférence</button>
 <button class="sector-tab" data-sector="sante">Santé</button>
 <button class="sector-tab" data-sector="distance">À distance</button>
+<button class="sector-tab" data-sector="permis">Permis de conduire</button>
+<button class="sector-tab" data-sector="tourisme">Tourisme</button>
 <button class="sector-tab" data-sector="mariage">Mariage civil</button>
 </div>
 
@@ -306,7 +317,7 @@ footer{font-size:14px;}
 <span class="marquee-logo"><img src="assets/logos/hopscotch.png" alt="Hopscotch Global PR Group"></span>
 <span class="marquee-logo"><img src="assets/logos/chu-liege.png" alt="CHU de Liège"></span>
 <span class="marquee-logo"><img src="assets/logos/saferworld.png" alt="Saferworld"></span>
-<span class="marquee-logo"><img src="assets/logos/issue.png" alt="iSSUE — Institut Suisse de Sécurité Urbaine et Événementielle"></span>
+<span class="marquee-logo"><img src="assets/logos/issue.png" alt="iSSUE, Institut Suisse de Sécurité Urbaine et Événementielle"></span>
 <span class="marquee-logo"><img src="assets/logos/migros.png" alt="Migros"></span>
 </div>
 </div>
@@ -317,7 +328,7 @@ footer{font-size:14px;}
 <div class="devis-block">
 <span class="tag">Votre devis</span>
 <h2>Obtenez votre devis d'interprétation en 30 minutes</h2>
-<p class="lead">Décrivez votre besoin, nous vous recontactons avec une proposition adaptée — sans engagement.</p>
+<p class="lead">Décrivez votre besoin, nous vous recontactons avec une proposition adaptée, sans engagement.</p>
 <div class="devis-steps">
 <div><b>1. Votre demande</b><span>Type de prestation, langues, secteur et date de la mission.</span></div>
 <div><b>2. Analyse par un conseiller</b><span>Sélection de l'interprète natif le plus adapté à votre besoin.</span></div>
@@ -352,19 +363,19 @@ footer{font-size:14px;}
 <section class="usp-section" style="background:var(--offwhite);">
 <div class="container">
 <span class="tag">Pourquoi Swisstranslate</span>
-<h2>L'expertise suisse, pas une plateforme internationale</h2>
+<h2>Genève, berceau de l'interprétation internationale</h2>
 <div class="usp-grid">
-<div class="usp-card"><h3>Interprète en Suisse</h3><p>Basés à Genève, jamais délocalisés à l'étranger.</p></div>
+<div class="usp-card"><h3>Ancrés à Genève</h3><p>Au cœur d'une ville qui accueille organisations, groupes et entreprises internationales.</p></div>
 <div class="usp-card"><h3>Interprète professionnel natif</h3><p>Chaque interprète travaille vers sa langue maternelle.</p></div>
 <div class="usp-card"><h3>Spécialisés secteur</h3><p>Un vocabulaire métier déjà maîtrisé avant la mission.</p></div>
-<div class="usp-card"><h3>Certifiés ISO*</h3><p>ISO 17100 et ISO 9001 : un cadre qualité vérifiable.</p></div>
+<div class="usp-card"><h3>Certifiés ISO*</h3><p>ISO 17100, ISO 9001 et ISO 20228 : un cadre qualité vérifiable.</p></div>
 </div>
 </div>
 </section>
 
 <section>
 <div class="container">
-<span class="tag">Secteurs & occasions</span>
+<span class="tag">Secteurs</span>
 <h2>Cliquez pour voir notre approche</h2>
 <div class="sector-grid-full">
 <div class="sector-card highlight" onclick="selectSector('generaliste')"><h4>Généraliste entreprise</h4><p>Réunions, négociations et visites au quotidien.</p></div>
@@ -372,6 +383,8 @@ footer{font-size:14px;}
 <div class="sector-card" onclick="selectSector('evenementiel')"><h4>Conférence & événementiel</h4><p>Conférences, salons, sommets multilingues.</p></div>
 <div class="sector-card" onclick="selectSector('sante')"><h4>Santé</h4><p>Congrès médicaux, essais cliniques, consultations patients.</p></div>
 <div class="sector-card" onclick="selectSector('distance')"><h4>À distance</h4><p>Zoom, Teams ou plateforme dédiée, où que vous soyez.</p></div>
+<div class="sector-card" onclick="selectSector('permis')"><h4>Permis de conduire</h4><p>Théorie, pratique ou démarches administratives auprès du service des automobiles.</p></div>
+<div class="sector-card" onclick="selectSector('tourisme')"><h4>Tourisme</h4><p>Visites guidées, shopping, excursions : pour vos clients internationaux, en lien avec les conciergeries d'hôtel.</p></div>
 <div class="sector-card" onclick="selectSector('mariage')"><h4>Mariage civil</h4><p>Interprète assermenté pour votre cérémonie à l'état civil.</p></div>
 </div>
 </div>
@@ -404,11 +417,7 @@ footer{font-size:14px;}
 </details>
 <details class="faq-item">
 <summary>Quel délai pour réserver un interprète ?</summary>
-<p>24 à 48h en urgence selon les langues, 1 à 2 semaines pour garantir le meilleur choix de spécialiste sectoriel.</p>
-</details>
-<details class="faq-item">
-<summary>Vos interprètes sont-ils basés en Suisse ?</summary>
-<p>Oui, tous nos interprètes sont basés en Suisse — nous ne sommes pas une plateforme internationale.</p>
+<p>48h en urgence selon les langues, 1 à 2 semaines pour garantir le meilleur choix de spécialiste sectoriel.</p>
 </details>
 </div>
 </section>
@@ -416,7 +425,7 @@ footer{font-size:14px;}
 <section>
 <div class="container">
 <div class="final">
-<img class="final-logo" src="assets/logo_white.png" alt="Swisstranslate — Words Without Borders">
+<img class="final-logo" src="assets/logo_white.png" alt="Swisstranslate, Words Without Borders">
 <h2>Trouvons ensemble l'interprète professionnel qu'il vous faut</h2>
 <p>Devis personnalisé en 30 minutes, ou échangez directement avec un conseiller.</p>
 <div class="final-ctas">
@@ -429,8 +438,8 @@ footer{font-size:14px;}
 
 <footer>
 <div class="container">
-Swisstranslate — Rue Ferdinand-Hodler 9, 1207 Genève — <a href="mailto:info@swisstranslate.ch">info@swisstranslate.ch</a>
-<br><small>* Chiffres et témoignages à titre d'illustration — à remplacer par les données réelles avant publication. Visuels ISO fournis par Swisstranslate.</small>
+Swisstranslate · Rue Ferdinand-Hodler 9, 1207 Genève · <a href="mailto:info@swisstranslate.ch">info@swisstranslate.ch</a>
+<br><small>* Chiffres et témoignages à titre d'illustration, à remplacer par les données réelles avant publication. Visuels ISO fournis par Swisstranslate.</small>
 </div>
 </footer>
 
@@ -448,7 +457,7 @@ Swisstranslate — Rue Ferdinand-Hodler 9, 1207 Genève — <a href="mailto:info
 
 <!--
   FORMULAIRE SALESFORCE WEB-TO-LEAD (natif Salesforce, distinct des Gravity Forms).
-  À COMPLÉTER avant mise en ligne — voir guide fourni dans le récapitulatif :
+  À COMPLÉTER avant mise en ligne, voir guide fourni dans le récapitulatif :
     1) Remplacer YOUR_ORG_ID par l'Org ID (champ "oid") généré par Salesforce
        Setup > Web-to-Lead > Generate Form.
     2) Vérifier l'URL d'action ci-dessous : elle doit correspondre au domaine
@@ -517,7 +526,9 @@ juridique: {icon:"⚖️", headline:"Interprétation juridique : tribunaux et ca
 sante: {icon:"🩺", headline:"Interprétation médicale pour congrès et consultations", sub:"Congrès, essais cliniques, consultations : une terminologie médicale maîtrisée et une confidentialité absolue.", quote:"« Organisation impeccable pour notre conférence médicale multilingue. »*", who:"Responsable Congrès", company:"Institution de santé"},
 mariage: {icon:"💍", headline:"Interprète assermenté pour votre mariage civil", sub:"En Suisse, un interprète certifié est légalement requis à l'état civil lorsqu'un des futurs époux ne maîtrise pas la langue locale. Nous vous accompagnons pour votre cérémonie.", quote:"« Un interprète assermenté impeccable pour notre mariage civil, tout s'est déroulé sans stress. »*", who:"Futurs mariés", company:"Genève"},
 evenementiel: {icon:"🎤", headline:"Interprétation pour conférences et événements multilingues", sub:"Conférences, salons, sommets : cabines, casques et techniciens disponibles pour une prestation clé en main.", quote:"« Une agence suisse réactive sur chaque événement. »*", who:"Event Manager", company:"Organisation internationale"},
-distance: {icon:"💻", headline:"Interprétation à distance, où que vous soyez", sub:"Via Zoom, Teams ou plateforme dédiée : même qualité, coûts et délais réduits, sans déplacement de l'interprète.", quote:"« Solution à distance impeccable pour nos réunions entre filiales. »*", who:"Coordinateur", company:"Groupe international"}
+distance: {icon:"💻", headline:"Interprétation à distance, où que vous soyez", sub:"Via Zoom, Teams ou plateforme dédiée : même qualité, coûts et délais réduits, sans déplacement de l'interprète.", quote:"« Solution à distance impeccable pour nos réunions entre filiales. »*", who:"Coordinateur", company:"Groupe international"},
+permis: {icon:"🚗", headline:"Interprète pour votre permis de conduire", sub:"Théorie, pratique ou démarches administratives : un interprète vous accompagne pour l'obtention de votre permis de conduire en Suisse.", quote:"« Un interprète efficace qui m'a permis de passer mon examen en toute sérénité. »*", who:"Candidat au permis", company:"Genève"},
+tourisme: {icon:"🧳", headline:"Interprète pour vos activités touristiques", sub:"Visites guidées, journées shopping, excursions : un interprète pour accompagner vos clients internationaux tout au long de leur séjour.", quote:"« Un service précieux pour accompagner nos clients internationaux lors de leurs visites. »*", who:"Concierge", company:"Hôtel, Genève"}
 };
 
 function selectSector(key){
